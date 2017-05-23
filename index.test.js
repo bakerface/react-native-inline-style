@@ -25,10 +25,8 @@
 
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
-import { StyleSheet, Text } from 'react-native-web';
-import canInlineStyle from '.';
-
-const InlineStyleText = canInlineStyle(Text);
+import { StyleSheet } from 'react-native';
+import { Text } from '.';
 
 function create(component) {
   const renderer = new ShallowRenderer();
@@ -38,9 +36,9 @@ function create(component) {
 
 test('should forward non-style properties', () => {
   const node = create(
-    <InlineStyleText foo>
+    <Text foo>
       Hello world
-    </InlineStyleText>
+    </Text>
   );
   
   expect(node.props).toEqual({
@@ -52,9 +50,9 @@ test('should forward non-style properties', () => {
 
 test('should combine style properties', () => {
   const node = create(
-    <InlineStyleText fontSize={16}>
+    <Text fontSize={16}>
       Hello world
-    </InlineStyleText>
+    </Text>
   );
 
   expect(node.props).toEqual({
@@ -74,9 +72,9 @@ test('should override styles with inlines', () => {
   });
 
   const node = create(
-    <InlineStyleText style={styles.text} fontSize={18}>
+    <Text style={styles.text} fontSize={18}>
       Hello world
-    </InlineStyleText>
+    </Text>
   );
 
   expect(node.props).toEqual({

@@ -1,6 +1,6 @@
 {
   "name": "react-native-inline-style",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Bringing inline styles to React components",
   "main": "index.js",
   "author": "Chris Baker <mail.chris.baker@gmail.com>",
@@ -22,6 +22,11 @@
   },
   "scripts": {
     "test": "xo && jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "react-native": "react-native-web"
+    }
   },
   "xo": {
     "esnext": false,
