@@ -1,0 +1,62 @@
+{
+  "name": "react-native-inline-style",
+  "version": "1.0.0",
+  "description": "Bringing inline styles to React components",
+  "main": "index.js",
+  "author": "Chris Baker <mail.chris.baker@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/bakerface/react-native-inline-style#readme",
+  "keywords": [
+    "react",
+    "native",
+    "inline",
+    "style",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakerface/react-native-inline-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bakerface/react-native-inline-style/issues"
+  },
+  "scripts": {
+    "test": "xo && jest"
+  },
+  "xo": {
+    "esnext": false,
+    "space": true,
+    "ignores": [
+      "index.test.js"
+    ],
+    "env": [
+      "browser"
+    ],
+    "rules": {
+      "brace-style": [
+        "error",
+        "stroustrup"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "react": ">=15.4.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
+  "devDependencies": {
+    "babel-jest": "^20.0.3",
+    "babel-preset-react-native": "^1.9.2",
+    "jest": "^20.0.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-native-web": "0.0.94",
+    "react-test-renderer": "^15.5.4",
+    "xo": "^0.18.2"
+  }
+}
